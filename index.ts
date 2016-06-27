@@ -8,7 +8,7 @@ function factory(data: Array<any>) : di.Inject {
     di.Inject.apply(this, data);
   }
   F.prototype = di.Inject.prototype;
-  return new F();
+  return new (<any>F());
 }
 
 export function Inject(classFunc: any) {
